@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Orianna Schultz 10/10/2023-->
+  <meta charset="UTF-8">
+  <title>Tuition Cost</title>
+  <script src="Lab03_Part2.js"></script>
+</head>
+<body>
+  <h1> Cost of Tuition at Mt.Pisgah Community College</h1>
+  <p id="totalCost"></p>
+  <script>
+    let userCreditTotal = prompt("Hello, How many credits are you taking here at Mt.Pisgah Community College!")
+    let userOutOfState = (prompt("Are you form out of state?") === "yes") ? true : false;
+    document.getElementById("totalCost").innerHTML = "Your total cost for tuition will be $" + userCostCalculator(userCreditTotal, userOutOfState) + "." ;
+ </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Written by Brian Bird, 4/17/23 -->
+    <!-- Edited by Orianna Schultz 10/10/2023--> 
+    <meta charset="UTF-8" />
+    <script src="Lab03_Part1.js"></script>
+    <title>Lab 3 Part 1</title>
+</head>
+
+<body>
+    <header>
+        <h1>CS 133JS, Lab 3, Part 1</h1>
+        <p>This part of your lab assignment is to solve the problems described in
+            <a href="https://lcc-cit.github.io/CS133JS-CourseMaterials/Labs/Lab03/CS133JS_Lab03_Part1_SelectionExercises.html" target="_blank">
+                the instructions for lab 3, part 1</a>. Only add code to this file where there are comments that start with TODO.
+        </p>
+    </header>
+    <h2>Solutions</h2>
+
+    <h3>1. Check for A+</h3>
+    <script>
+        document.write("Your Grade was 97: " + checkForAPlus(97) + "<br>");
+        document.write("Your Grade was 98: " + checkForAPlus(98));
+    </script>
+
+    <h3>2. Check for A+, A, A- </h3>
+    <script>
+        document.write("Your Grade was 99: " + checkForAnyA(99) + "<br>");
+        document.write("Your Grade was 96: " + checkForAnyA(96) + "<br>");
+        document.write("Your Grade was 92: " + checkForAnyA(92) + "<br>");
+        document.write("Your Grade was 33: " + checkForAnyA(33) + "<br>");
+    </script>
+
+    <h3>3. Letter to GPA conversion</h3>
+    <script>
+        document.write("Your A+ gives you a " + gpaConversion("A+") + " GPA" + "<br>");
+        document.write("Your A gives you a " + gpaConversion("A") + " GPA" + "<br>");
+        document.write("Your A- gives you a " + gpaConversion("A-") + " GPA" + "<br>");
+        document.write("Your B gives you an " + gpaConversion("B") + " GPA" + "<br>");
+    </script>
+
+    <h3>4. Check file upload</h3>
+    <script>
+        document.write("Your .doc file was " + checkFileType(".doc") + "<br>");
+        document.write("Your .jpg file was " + checkFileType(".jpg") + "<br>");
+    </script>
+
+    <h3>5. Two factor authentication</h3>
+    <script>
+        document.write("Username:******** <br> Pin:**** <br>" + authenticate("bestUser", 1234) + "<br>")
+        document.write("Username:** <br> Pin:**** <br>" + authenticate("me", 4532))
+    </script>
+
+    <h3>6. Kindergarten admission</h3>
+    <script>
+        document.write("Age:5  <br> D.O.B: July,5th <br>" + canStartKindergarten(5, true) + "<br>")
+        document.write("Age:6  <br> D.O.B: July, 3rd <br>" + canStartKindergarten(6, true) + "<br>")
+        document.write("Age:4  <br> D.O.B: July, 23rd <br>" + canStartKindergarten(4, true) + "<br>")
+    </script>
+
+    <h3>7. Roman numeral convertor</h3>
+    <script>
+        document.write("I : " + romanNumeralConversion("I") + "<br>");
+        document.write("II : " + romanNumeralConversion("II") + "<br>");
+        document.write("III : " + romanNumeralConversion("III") + "<br>");
+        document.write("IV : " + romanNumeralConversion("IV") + "<br>");
+        document.write("V : " + romanNumeralConversion("V") + "<br>");
+        document.write("VI : " + romanNumeralConversion("VI") + "<br>");
+    </script>
+
+    <h3>8. Phone dial pad letters</h3>
+    <script>
+        document.write("1 : " + convertDialPad(1) + "<br>");
+        document.write("B : " + convertDialPad("B") + "<br>");
+        document.write("E : " + convertDialPad("E") + "<br>");
+        document.write("Z : " + convertDialPad("Z") + "<br>");
+    </script>
+    <footer>
+        <p>Creative Commons License for Beginning JavaScript Lab Exercises by Brian Bird, written in 2023, are licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+    </footer>
+</body>
+
+</html>

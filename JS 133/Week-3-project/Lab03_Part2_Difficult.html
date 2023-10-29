@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Orianna Schultz 10/11/2023-->
+  <meta charset="UTF-8">
+  <title>Trail Difficulty</title>
+  <script src="Lab03_Part2.js"></script>
+</head>
+<body>
+  <h1>Trail Difficulty</h1>
+  <p id="trailDifficulty"></p>
+
+  <script>
+    let trailMiles = Number(prompt("How many miles will you be traveling?"));
+    let trailElevationGain = Number(prompt("How much elevation (in ft) gain will there be for this trip?"))
+    document.getElementById("trailDifficulty").innerHTML = "The Trail you are planning to take is rated: " + trailDifficultyCalculator(trailMiles, trailElevationGain) + "." ;
+  </script>
+</body>
+</html>

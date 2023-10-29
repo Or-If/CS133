@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Orianna Schultz 10/11/2023-->
+  <meta charset="UTF-8">
+  <title>Trail Types</title>
+  <script src="Lab03_Part2.js"></script>
+</head>
+<body>
+  <h1>Trail Types Near You</h1>
+  <p1 id="trailNearYou"></p1>
+  
+  <script>
+    let trailActivity = prompt("Hello, what kind of activity would you like to search for? \n -Hiking \n -Bike touring \n -Mountain biking \n -Horseback riding");
+    document.getElementById("trailNearYou").innerHTML = "These Trails will fit the activity you are looking to do <br>" + trailTypeCalculator(trailActivity);
+  </script>
+</body>
+</html>

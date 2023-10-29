@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Orianna Schultz 10/05/2023-->
+    <meta>
+    <script src="fill_blank.js"></script>
+    <title>Fill In The Blank</title>
+  </head>
+  <body>
+    <h1> Ready for some Questions?</h1>
+    <h2> Cool here are 7 </h2>
+    <p> exciting right?</p>
+
+
+    <h3>1. What is the name of Targets mascot?</h3>
+    <input id="questionInput_1"><button onclick="runQuestion_1('Spot');">Enter</button><br>
+    <h4>Congrats you are <span id="questionOutput_1"></span> </h4>
+    <hr>
+    <script>
+      function runQuestion_1(correctAnswer) {
+        let userResponse = document.getElementById("questionInput_1").value;
+        questionComparison(userResponse, correctAnswer);
+        document.getElementById("questionOutput_1").innerHTML = answerReturn ;
+      }
+    </script>
+
+    <h3>2. What is the largest shark.</h3>
+    <input id="questionInput_2"><button onclick="runQuestion_2('Whale shark');">Enter</button><br>
+    <h4>Congrats you are <span id="questionOutput_2"></span> </h4>
+    <hr>
+    <script>
+      function runQuestion_2(correctAnswer) {
+        let userResponse = document.getElementById("questionInput_2").value;
+        questionComparison(userResponse, correctAnswer);
+        document.getElementById("questionOutput_2").innerHTML = answerReturn ;
+      }
+    </script>
+
+    <h3>3. What country made the Statue of Liberty.</h3>
+    <input id="questionInput_3"><button onclick="runQuestion_3('France');">Enter</button><br>
+    <h4>Congrats you are <span id="questionOutput_3"></span> </h4>
+    <hr>
+    <script>
+      function runQuestion_3(correctAnswer) {
+        let userResponse= document.getElementById("questionInput_3").value;
+        questionComparison(userResponse, correctAnswer);
+        document.getElementById("questionOutput_3").innerHTML = answerReturn ;
+      }
+    </script>
+
+    <h3>4. What city hosted the summer Olympics 2012.</h3>
+    <input id="questionInput_4"><button onclick="runQuestion_4('London');">Enter</button><br>
+    <h4>Congrats you are <span id="questionOutput_4"></span> </h4>
+    <hr>
+    <script>
+      function runQuestion_4(correctAnswer) {
+        let userResponse = document.getElementById("questionInput_4").value;
+        questionComparison(userResponse, correctAnswer);
+        document.getElementById("questionOutput_4").innerHTML = answerReturn ;
+      }
+    </script>
+
+    <h3>5. What is the deepest part of the ocean.</h3>
+    <input id="questionInput_5"><button onclick="runQuestion_5('Challenger Deep');">Enter</button><br>
+    <h4>Congrats you are <span id="questionOutput_5"></span> </h4>
+    <hr>
+    <script>
+      function runQuestion_5(correctAnswer) {
+        let userResponse= document.getElementById("questionInput_5").value;
+        questionComparison(userResponse, correctAnswer);
+        document.getElementById("questionOutput_5").innerHTML = answerReturn ;
+      }
+    </script>
+
+    <h3>6. Which bird is often associated with delivering babies.</h3>
+    <input id="questionInput_6"><button onclick="runQuestion_6('Stork');">Enter</button><br>
+    <h4>Congrats you are <span id="questionOutput_6"></span> </h4>
+    <hr>
+    <script>
+      function runQuestion_6(correctAnswer) {
+        let userResponse= document.getElementById("questionInput_6").value;
+        questionComparison(userResponse, correctAnswer);
+        document.getElementById("questionOutput_6").innerHTML = answerReturn ;
+      }
+    </script>
+
+    <h3>7. Which U.S state is known as "America's Dairy Land"</h3>
+    <input id="questionInput_7"><button onclick="runQuestion_7('Wisconsin');">Enter</button><br>
+    <h4>Congrats you are <span id="questionOutput_7"></span> </h4>
+    <hr>
+    <script>
+      function runQuestion_7(correctAnswer) {
+        let userResponse= document.getElementById("questionInput_7").value;
+        questionComparison(userResponse, correctAnswer);
+        document.getElementById("questionOutput_7").innerHTML = answerReturn ;
+      }
+    </script>
+
+  </body>
+</html>

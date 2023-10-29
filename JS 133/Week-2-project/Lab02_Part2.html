@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Orianna Schultz 10/05/2023-->
+  <meta charset="UTF-8"/>
+  <script src="Lab02_Part2.js"></script>
+  <title>Temperature Conversion</title>
+</head>
+<body>
+  <h3>Congrats this is your conversion</h3><br>
+  <span id="tempOutput"></span><br>
+  <script>
+    let temperatureScale = prompt("Hello would you like to convert to \xB0C or \xB0F" )
+    let temperature = prompt("Please enter the number you would like converted")
+    document.getElementById("tempOutput").innerHTML = convertTemperature(temperatureScale, temperature);
+  </script>
+</body>
+</html>

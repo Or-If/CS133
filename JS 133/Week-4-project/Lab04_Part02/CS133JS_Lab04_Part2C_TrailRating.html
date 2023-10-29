@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Starter file by Brian Bird, 4/19/22 -->
+<!-- Orianna Schultz 10/19/2023-->
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Lab 4 Part 2, #2</title>
+    <script src="CS133JS_Lab04_Part2_GroupC.js"></script>
+</head>
+
+<body>
+    <h1>Lab 4, Part 2, Group C</h1>
+    <h2>Trail Rating</h2>
+
+    <script>
+        let distance = 0;
+        let elevation = 0;
+
+        // This is the only way I could think of using a do statement to validate while also changing the question asked. 
+        // Unless you were just looking for it to say same message 
+        // I think I quite rather enjoyed having the original prompt happen in page than running the validation in the function,
+        // it felt much smoother to me at least,
+        // I would love to hear input about this.
+
+        do {
+            if (distance===0) {
+                distance = prompt("Please enter the distance in miles you will be traveling.")
+            } else {
+                distance = prompt("Please enter a valid distance, between 1 and 15")
+            }
+            
+            if (elevation===0) {
+                elevation = prompt("Please enter the elevation in ft you will be traveling.")
+            } else {
+                elevation = prompt("Please enter a valid distance, between 0 and 3000")
+            }
+        } while ((distance < 1 || distance > 15) || (elevation < 0 || elevation > 3000));
+        
+        // TODO: Write code to get input and do validation
+        document.write(reportRating(distance, elevation));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Starter file by Brian Bird, 4/19/22 -->
+<!-- Orianna Schultz 10/19/2023-->
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Lab 4 Part 2 #3</title>
+    <script src="CS133JS_Lab04_Part2_GroupC.js"></script>
+</head>
+
+<body>
+    <h1>Lab 4, Part 2, Group C</h1>
+    <h2>Trail Types</h2>
+
+    <script>
+        let activity = "";
+        let runAgain = "yes";
+        // activity = prompt("Hello, what kind of activity would you like to search for? \n -Hiking \n -Bike touring \n -Mountain biking \n -Horseback riding");
+
+
+        //I was having quite a bit of trouble having the information be shown on to the screen than asking if you want to look again,
+        //I decided alert would allow that to happen without the ability to like call from a button or something.
+        //and with that I couldnt have a validation run on the html page.
+
+        while (runAgain === "yes") {
+        //  document.write(findTrails(activity));
+            alert(findTrails(prompt("Hello, what kind of activity would you like to search for? \n -Hiking \n -Bike touring \n -Mountain biking \n -Horseback riding")));
+            runAgain = prompt("Would you like to run the program again? \n yes/no")
+        }
+
+        
+        /*
+        // TODO: Write code to get input and do validation--use a loop
+        document.write(findTrails(activity));
+        // TODO: Write code to ask the user if they want to do it again--use a loop
+        */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Written by Brian Bird, 4/12/23 -->
+    <!-- JavaScript by Orianna Schultz, 10/04/2023-->
+    <meta charset="UTF-8" />
+    <script src="Lab02_Part1.js"></script>
+    <title>Lab 2 Part 1</title>
+</head>
+
+<body>
+    <header>
+        <h1>CS 133JS, Lab 2, Part 1</h1>
+        <p>This part of your lab assignment is to solve the problems described in
+            <a href="https://lcc-cit.github.io/CS133JS-CourseMaterials/Labs/Lab02/CS133JS_Lab02_Part1_FunctionExercises.html" target="_blank">
+                the instructions for lab 2, part 1</a>. Only add code to this file where there are comments that start with TODO.
+        </p>
+    </header>
+    <h2>Solutions</h2>
+
+    <h3>1. JavaScript is awesome!</h3>
+    <script>
+       jsIsAwesome();
+    </script>
+
+    <h3>2. Your favorite animal</h3>
+    <script>
+        favAnimal("sheep");    
+    </script>
+
+    <h3>3. Average price calculator</h3>
+    <script>
+        calcAvgPrice(6, 24, 33);
+    </script>
+
+    <h3>4. Letter counter</h3>
+    Enter a sentance&nbsp;<input id="sentence"><button onclick="doCountLetters()">Enter</button><br> 
+    The number of letters, including spaces and punctuation, is: <span id="letterCount"></span><br>
+    <script>
+        function doCountLetters() {
+            let sentence = document.getElementById("sentence").value;
+            let count = sentence.length; 
+            document.getElementById("letterCount").innerHTML = count;
+        }
+    </script>
+
+    <h3>5. Oregon quiz</h3>
+    What is the capital of Oregon? &nbsp;
+    <input id="oregonInput"><button onclick="doOregonQuiz()">Enter Answer</button>
+    <br> Your answer is <span id="oregonOutput"></span><br>
+    <script>
+        
+        var result = "";
+        function doOregonQuiz() {
+            let answer = document.getElementById("oregonInput").value;
+            //I was having trouble getting the let result work so i set it as a global var and moved it.
+            quizQuestion(answer);
+            document.getElementById("oregonOutput").innerHTML = result;
+        }
+    </script>
+
+    <h3>6. Math quiz</h3>
+    What is 7 X 8? &nbsp;
+    <input id="mathInput"><button onclick="doMathQuiz()">Enter Answer</button>
+    <br> Your answer is <span id="mathOutput"></span><br>
+    <script>
+
+        var resultMath = "";
+        function doMathQuiz() {
+            let answer = document.getElementById("mathInput").value;
+            //Same problem as last set result to resultMath and defined with global var
+            mathQuestion(7, 8, answer);
+            document.getElementById("mathOutput").innerHTML = resultMath;
+        }
+    </script>
+
+    <h3>7. MPG Calculator</h3>
+    How many miles were driven? &nbsp;<input id="miles"><br> How many gallons of gas were used?<input id="gallons">&nbsp;
+    <button onclick="doCalcMpg()">Enter</button><br> Your answer is <span id="mpg"></span><br> MPG.
+    <script>
+        var mpgTotal = "";
+        function doCalcMpg() {
+            let milesDriven = document.getElementById("miles").value;
+            let gallonsUsed = document.getElementById("gallons").value;
+
+            calcMpg(milesDriven, gallonsUsed);
+            document.getElementById("mpg").innerHTML = mpgTotal;
+        }
+    </script>
+
+    <h3>8. Temperature Conversion</h3>
+    Enter the temperature in degrees Fahrenheit &nbsp;
+    <input id="fahrenheit"><button onclick="doConvertTemp()">Enter</button>
+    <br> Your answer is <span id="tempCelsius"></span><br>
+    <script>
+        var tempC = "";
+        function doConvertTemp() {
+            let degreesFahrenheit = document.getElementById("fahrenheit").value;
+            //once again set to global var
+            convertTemp(degreesFahrenheit);
+
+            document.getElementById("tempCelsius").innerHTML = tempC;
+        }
+    </script>
+    <footer>
+        <p>Creative Commons License for Beginning JavaScript Lab Exercises by Brian Bird, written in 2023, are licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+    </footer>
+</body>
+
+</html>
