@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Orianna Schultz 10/05/2023-->
+  <!-- Repurposed 11/14/2023-->
+  <meta charset="UTF-8"/>
+  <script src="Temp_Conversion.js"></script>
+  <title>Temperature Conversion</title>
+</head>
+<body>
+  <h3>Please enter the temperature you would like converted.</h3> <br>
+  <input type="number" id="tempInput">
+  <input type="radio" name="tempScale" Value="C" onclick="updateTempScale('C')"> C
+  <input type="radio" name="tempScale" Value="F" onclick="updateTempScale('F')"> F <br>
+  <button onclick="convertTemperature(document.querySelector('#tempInput').value)">Enter</button>
+  <p>Your new temperature: <span id="tempOutput"></span></p>
+</body>
+</html>
