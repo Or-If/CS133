@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://lcc-cit.github.io/CS133JS-CourseMaterials/Labs/Lab07/DomAndEventExercises.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Written by Brian Bird, 5/27/2020 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/O Exercises</title>
+</head>
+
+<body>
+    <h1>Web Page Input and Output Exercises</h1>
+    <h2>Instructions</h2>
+    Download this page's source code.<br> Open the source code in an editor and put your name and the date in the head element.<br> Follow the instructions in each comment that starts with TODO. The comments will tell you where and how to write your code.
+    <section id="s1">
+        <h2>1. Referencing HTML Elements</h2>
+        <strong>Schools in Eugene</strong>
+        <ul>
+            <li id="Lane">LCC</li>
+            <li id="UofO">U of O</li>
+            <li>NCU</li>
+        </ul>
+        <script>
+            document.getElementById("Lane").innerHTML = "Lane Community College";
+            document.getElementById("UofO").innerHTML = "University of Oregon"
+        </script>
+    </section>
+
+    <section id="s2">
+        <h2>2. Accessing Element Attributes</h2>
+        <!-- TODO: Optional, if needed, add an id attribute to the input element -->
+        <input id="inputCollege" value="Your college"><br> College name: <span id="collegeOut"></span>
+
+        <script>
+            document.getElementById("collegeOut").innerHTML = document.getElementById("inputCollege").value
+        </script>
+    </section>
+
+    <section id="s3">
+        <h3>3. Event Handlers</h3>
+        <!-- TODO: add an onmousedown event attribute to the p element -->
+        <p onmousedown="effect()">This paragraph has an onmousedown event</p>
+        <!-- TODO: Optional, if needed, add an id attribute to the span element -->
+        <span id="out"></span>
+        <script>
+            function effect(){ document.getElementById("out").innerHTML += "<br>down";}
+        </script>
+    </section>
+
+    <section id="s4">
+        <h3>4. Using a button to get input</h3>
+        <!-- TODO: Optional, if needed, add an id attribute to the input element -->
+        Enter your favorite desert:<input id="dessertIn">
+        <!-- TODO: add an onclick event attribute to the button element -->
+        <button onmousedown="buttonClick()">Enter</button>
+        <!-- TODO: Optional, if needed, add an id attribute to the span element -->
+        <p>Favorite desert: <span id = "dessertOut"></span></p>
+        <script>
+            function buttonClick(){
+                document.getElementById("dessertOut").innerHTML = document.getElementById("dessertIn").value;
+            }
+        </script>
+    </section>
+
+    <section id="s5">
+        <h3>5. Displaying Output</h3>
+        <!-- TODO: Optional, if needed, add an id attribute to the p element -->
+        <p id="mascotOut">School mascot: </p>
+        <script>
+            document.getElementById("mascotOut").innerHTML = "Titan";
+        </script>
+    </section>
+
+
+</body></html>

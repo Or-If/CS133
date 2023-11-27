@@ -30,6 +30,7 @@ function rollTheDice () {
     if (rollNumber===0) {
       if (dieOneValue===j || dieTwoValue===j || dieThreeValue===j) {
         dieHighestOne = j;
+
         break;
       }
     } else if (rollNumber===1) {
@@ -57,7 +58,7 @@ function rollTheDice () {
   return 
 }
 
-// declares the images shown on screen to be the same as what you 
+// declares the images shown on screen to be the same as what you rolled
 function dieImageDeclaration (dieNumber) {
   let dieImageOutput;
   console.log(dieNumber);
@@ -129,3 +130,17 @@ function dieImageDeclaration (dieNumber) {
   
   return dieImageOutput;
 }
+
+
+
+let blank;
+function blankblank (randomNumber) {
+blank = `final_project_images/dice-${randomNumber}.png`
+}
+
+/*
+if (turnNumber % 2 === 0) {
+  playerTurn = true
+  console.log(playerTurn);
+};
+*/
