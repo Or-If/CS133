@@ -17,109 +17,110 @@
     <button onclick="checkIfNumber()">Submit</button>
   </div>
   <div class="difficulty">
-    <button onclick="changeDifficulty(1)">Easy</button>
-    <button onclick="changeDifficulty(2)">Medium</button>
-    <button onclick="changeDifficulty(3)">Hard</button>
+    <button onclick="setPuzzle(1)">Easy</button>
+    <button onclick="setPuzzle(2)">Medium</button>
+    <button onclick="setPuzzle(3)">Hard</button>
+    <button onclick="setPuzzle(4)">Finished Puzzle</button>
   </div>
   <div id="gameSpace">
     <div class="gameRow">
-      <input id="input_00" onchange="arraySet(0, 0, '#input_00')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_01" onchange="arraySet(0, 1, '#input_01')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_02" onchange="arraySet(0, 2, '#input_02')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_03" onchange="arraySet(0, 3, '#input_03')" maxlength="1" min="1" max="1" type="number" value="4" disabled>
-      <input id="input_04" onchange="arraySet(0, 4, '#input_04')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_05" onchange="arraySet(0, 5, '#input_05')" maxlength="1" min="1" max="1" type="number" value="6" disabled>
-      <input id="input_06" onchange="arraySet(0, 6, '#input_06')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_07" onchange="arraySet(0, 7, '#input_07')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_08" onchange="arraySet(0, 8, '#input_08')" maxlength="1" min="1" max="1" type="number" value="2" disabled>
+      <input id="input_00" onchange="arraySet(0, 0, '#input_00')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_01" onchange="arraySet(0, 1, '#input_01')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_02" onchange="arraySet(0, 2, '#input_02')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_03" onchange="arraySet(0, 3, '#input_03')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_04" onchange="arraySet(0, 4, '#input_04')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_05" onchange="arraySet(0, 5, '#input_05')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_06" onchange="arraySet(0, 6, '#input_06')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_07" onchange="arraySet(0, 7, '#input_07')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_08" onchange="arraySet(0, 8, '#input_08')" maxlength="1" min="1" max="1" type="number" disabled>
     </div>
     <div class="gameRow">
-      <input id="input_10" onchange="arraySet(1, 0, '#input_10')" maxlength="1" min="1" max="1" type="number" value="8" disabled>
-      <input id="input_11" onchange="arraySet(1, 1, '#input_11')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_12" onchange="arraySet(1, 2, '#input_12')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_13" onchange="arraySet(1, 3, '#input_13')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_14" onchange="arraySet(1, 4, '#input_14')" maxlength="1" min="1" max="1" type="number" value="5" disabled>
-      <input id="input_15" onchange="arraySet(1, 5, '#input_15')" maxlength="1" min="1" max="1" type="number" value="3" disabled>
-      <input id="input_16" onchange="arraySet(1, 6, '#input_16')" maxlength="1" min="1" max="1" type="number" value="1" disabled>
-      <input id="input_17" onchange="arraySet(1, 7, '#input_17')" maxlength="1" min="1" max="1" type="number" value="9" disabled>
-      <input id="input_18" onchange="arraySet(1, 8, '#input_18')" maxlength="1" min="1" max="1" type="number">
+      <input id="input_10" onchange="arraySet(1, 0, '#input_10')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_11" onchange="arraySet(1, 1, '#input_11')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_12" onchange="arraySet(1, 2, '#input_12')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_13" onchange="arraySet(1, 3, '#input_13')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_14" onchange="arraySet(1, 4, '#input_14')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_15" onchange="arraySet(1, 5, '#input_15')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_16" onchange="arraySet(1, 6, '#input_16')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_17" onchange="arraySet(1, 7, '#input_17')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_18" onchange="arraySet(1, 8, '#input_18')" maxlength="1" min="1" max="1" type="number" disabled>
     </div>
     <div class="gameRow">
-      <input id="input_20" onchange="arraySet(2, 0, '#input_20')" maxlength="1" min="1" max="1" type="number" value="9" disabled>
-      <input id="input_21" onchange="arraySet(2, 1, '#input_21')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_22" onchange="arraySet(2, 2, '#input_22')" maxlength="1" min="1" max="1" type="number" value="6" disabled>
-      <input id="input_23" onchange="arraySet(2, 3, '#input_23')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_24" onchange="arraySet(2, 4, '#input_24')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_25" onchange="arraySet(2, 5, '#input_25')" maxlength="1" min="1" max="1" type="number" value="8" disabled>
-      <input id="input_26" onchange="arraySet(2, 6, '#input_26')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_27" onchange="arraySet(2, 7, '#input_27')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_28" onchange="arraySet(2, 8, '#input_28')" maxlength="1" min="1" max="1" type="number">
+      <input id="input_20" onchange="arraySet(2, 0, '#input_20')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_21" onchange="arraySet(2, 1, '#input_21')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_22" onchange="arraySet(2, 2, '#input_22')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_23" onchange="arraySet(2, 3, '#input_23')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_24" onchange="arraySet(2, 4, '#input_24')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_25" onchange="arraySet(2, 5, '#input_25')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_26" onchange="arraySet(2, 6, '#input_26')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_27" onchange="arraySet(2, 7, '#input_27')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_28" onchange="arraySet(2, 8, '#input_28')" maxlength="1" min="1" max="1" type="number" disabled>
     </div>
     <div class="gameRow">
-      <input id="input_30" onchange="arraySet(3, 0, '#input_30')" maxlength="1" min="1" max="1" type="number" value="6" disabled>
-      <input id="input_31" onchange="arraySet(3, 1, '#input_31')" maxlength="1" min="1" max="1" type="number" value="7" disabled>
-      <input id="input_32" onchange="arraySet(3, 2, '#input_32')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_33" onchange="arraySet(3, 3, '#input_33')" maxlength="1" min="1" max="1" type="number" value="1" disabled>
-      <input id="input_34" onchange="arraySet(3, 4, '#input_34')" maxlength="1" min="1" max="1" type="number" value="8" disabled>
-      <input id="input_35" onchange="arraySet(3, 5, '#input_35')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_36" onchange="arraySet(3, 6, '#input_36')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_37" onchange="arraySet(3, 7, '#input_37')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_38" onchange="arraySet(3, 8, '#input_38')" maxlength="1" min="1" max="1" type="number"  value="9" disabled>
+      <input id="input_30" onchange="arraySet(3, 0, '#input_30')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_31" onchange="arraySet(3, 1, '#input_31')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_32" onchange="arraySet(3, 2, '#input_32')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_33" onchange="arraySet(3, 3, '#input_33')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_34" onchange="arraySet(3, 4, '#input_34')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_35" onchange="arraySet(3, 5, '#input_35')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_36" onchange="arraySet(3, 6, '#input_36')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_37" onchange="arraySet(3, 7, '#input_37')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_38" onchange="arraySet(3, 8, '#input_38')" maxlength="1" min="1" max="1" type="number" disabled>
     </div>
     <div class="gameRow">
-      <input id="input_40" onchange="arraySet(4, 0, '#input_40')" maxlength="1" min="1" max="1" type="number"  value="1" disabled>
-      <input id="input_41" onchange="arraySet(4, 1, '#input_41')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_42" onchange="arraySet(4, 2, '#input_42')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_43" onchange="arraySet(4, 3, '#input_43')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_44" onchange="arraySet(4, 4, '#input_44')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_45" onchange="arraySet(4, 5, '#input_45')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_46" onchange="arraySet(4, 6, '#input_46')" maxlength="1" min="1" max="1" type="number"  value="3" disabled>
-      <input id="input_47" onchange="arraySet(4, 7, '#input_47')" maxlength="1" min="1" max="1" type="number"  value="7" disabled>
-      <input id="input_48" onchange="arraySet(4, 8, '#input_48')" maxlength="1" min="1" max="1" type="number">
+      <input id="input_40" onchange="arraySet(4, 0, '#input_40')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_41" onchange="arraySet(4, 1, '#input_41')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_42" onchange="arraySet(4, 2, '#input_42')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_43" onchange="arraySet(4, 3, '#input_43')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_44" onchange="arraySet(4, 4, '#input_44')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_45" onchange="arraySet(4, 5, '#input_45')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_46" onchange="arraySet(4, 6, '#input_46')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_47" onchange="arraySet(4, 7, '#input_47')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_48" onchange="arraySet(4, 8, '#input_48')" maxlength="1" min="1" max="1" type="number" disabled>
     </div>
     <div class="gameRow">
-      <input id="input_50" onchange="arraySet(5, 0, '#input_50')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_51" onchange="arraySet(5, 1, '#input_51')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_52" onchange="arraySet(5, 2, '#input_52')" maxlength="1" min="1" max="1" type="number"  value="8" disabled>
-      <input id="input_53" onchange="arraySet(5, 3, '#input_53')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_54" onchange="arraySet(5, 4, '#input_54')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_55" onchange="arraySet(5, 5, '#input_55')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_56" onchange="arraySet(5, 6, '#input_56')" maxlength="1" min="1" max="1" type="number"  value="5" disabled>
-      <input id="input_57" onchange="arraySet(5, 7, '#input_57')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_58" onchange="arraySet(5, 8, '#input_58')" maxlength="1" min="1" max="1" type="number">
+      <input id="input_50" onchange="arraySet(5, 0, '#input_50')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_51" onchange="arraySet(5, 1, '#input_51')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_52" onchange="arraySet(5, 2, '#input_52')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_53" onchange="arraySet(5, 3, '#input_53')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_54" onchange="arraySet(5, 4, '#input_54')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_55" onchange="arraySet(5, 5, '#input_55')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_56" onchange="arraySet(5, 6, '#input_56')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_57" onchange="arraySet(5, 7, '#input_57')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_58" onchange="arraySet(5, 8, '#input_58')" maxlength="1" min="1" max="1" type="number" disabled>
     </div>
     <div class="gameRow">
-      <input id="input_60" onchange="arraySet(6, 0, '#input_60')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_61" onchange="arraySet(6, 1, '#input_61')" maxlength="1" min="1" max="1" type="number"  value="8" disabled>
-      <input id="input_62" onchange="arraySet(6, 2, '#input_62')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_63" onchange="arraySet(6, 3, '#input_63')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_64" onchange="arraySet(6, 4, '#input_64')" maxlength="1" min="1" max="1" type="number"  value="4" disabled>
-      <input id="input_65" onchange="arraySet(6, 5, '#input_65')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_66" onchange="arraySet(6, 6, '#input_66')" maxlength="1" min="1" max="1" type="number"  value="2" disabled>
-      <input id="input_67" onchange="arraySet(6, 7, '#input_67')" maxlength="1" min="1" max="1" type="number"  value="5" disabled>
-      <input id="input_68" onchange="arraySet(6, 8, '#input_68')" maxlength="1" min="1" max="1" type="number">
+      <input id="input_60" onchange="arraySet(6, 0, '#input_60')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_61" onchange="arraySet(6, 1, '#input_61')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_62" onchange="arraySet(6, 2, '#input_62')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_63" onchange="arraySet(6, 3, '#input_63')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_64" onchange="arraySet(6, 4, '#input_64')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_65" onchange="arraySet(6, 5, '#input_65')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_66" onchange="arraySet(6, 6, '#input_66')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_67" onchange="arraySet(6, 7, '#input_67')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_68" onchange="arraySet(6, 8, '#input_68')" maxlength="1" min="1" max="1" type="number" disabled>
     </div>
     <div class="gameRow">
-      <input id="input_70" onchange="arraySet(7, 0, '#input_70')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_71" onchange="arraySet(7, 1, '#input_71')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_72" onchange="arraySet(7, 2, '#input_72')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_73" onchange="arraySet(7, 3, '#input_73')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_74" onchange="arraySet(7, 4, '#input_74')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_75" onchange="arraySet(7, 5, '#input_75')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_76" onchange="arraySet(7, 6, '#input_76')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_77" onchange="arraySet(7, 7, '#input_77')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_78" onchange="arraySet(7, 8, '#input_78')" maxlength="1" min="1" max="1" type="number"  value="4" disabled>
+      <input id="input_70" onchange="arraySet(7, 0, '#input_70')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_71" onchange="arraySet(7, 1, '#input_71')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_72" onchange="arraySet(7, 2, '#input_72')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_73" onchange="arraySet(7, 3, '#input_73')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_74" onchange="arraySet(7, 4, '#input_74')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_75" onchange="arraySet(7, 5, '#input_75')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_76" onchange="arraySet(7, 6, '#input_76')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_77" onchange="arraySet(7, 7, '#input_77')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_78" onchange="arraySet(7, 8, '#input_78')" maxlength="1" min="1" max="1" type="number" disabled>
     </div>
     <div class="gameRow">
-      <input id="input_80" onchange="arraySet(8, 0, '#input_80')" maxlength="1" min="1" max="1" type="number"  value="4" disabled>
-      <input id="input_81" onchange="arraySet(8, 1, '#input_81')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_82" onchange="arraySet(8, 2, '#input_82')" maxlength="1" min="1" max="1" type="number"  value="9" disabled>
-      <input id="input_83" onchange="arraySet(8, 3, '#input_83')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_84" onchange="arraySet(8, 4, '#input_84')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_85" onchange="arraySet(8, 5, '#input_85')" maxlength="1" min="1" max="1" type="number">
-      <input id="input_86" onchange="arraySet(8, 6, '#input_86')" maxlength="1" min="1" max="1" type="number"  value="6" disabled>
-      <input id="input_87" onchange="arraySet(8, 7, '#input_87')" maxlength="1" min="1" max="1" type="number"  value="1" disabled> 
-      <input id="input_88" onchange="arraySet(8, 8, '#input_88')" maxlength="1" min="1" max="1" type="number">
+      <input id="input_80" onchange="arraySet(8, 0, '#input_80')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_81" onchange="arraySet(8, 1, '#input_81')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_82" onchange="arraySet(8, 2, '#input_82')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_83" onchange="arraySet(8, 3, '#input_83')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_84" onchange="arraySet(8, 4, '#input_84')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_85" onchange="arraySet(8, 5, '#input_85')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_86" onchange="arraySet(8, 6, '#input_86')" maxlength="1" min="1" max="1" type="number" disabled>
+      <input id="input_87" onchange="arraySet(8, 7, '#input_87')" maxlength="1" min="1" max="1" type="number" disabled> 
+      <input id="input_88" onchange="arraySet(8, 8, '#input_88')" maxlength="1" min="1" max="1" type="number" disabled>
     </div>
   </div>
 </body>

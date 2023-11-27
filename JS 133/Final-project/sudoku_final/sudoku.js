@@ -1,47 +1,130 @@
 // Orianna Schultz 11/05/2023
 
+const allGrids = {
 
-const grid = [
-  [NaN, NaN, NaN, "4", NaN, "6", NaN, NaN, "2"],
-  ["8", NaN, NaN, NaN, "5", "3", "1", "9", NaN],
-  ["9", NaN, "6", NaN, NaN, "8", NaN, NaN, NaN],
-  ["6", "7", NaN, "1", "8", NaN, NaN, NaN, "9"],
-  ["1", NaN, NaN, NaN, NaN, NaN, "3", "7", NaN],
-  [NaN, NaN, "8", NaN, NaN, NaN, "5", NaN, NaN],
-  [NaN, "8", NaN, NaN, "4", NaN, "2", "5", NaN],
-  [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, "4"],
-  ["4", NaN, "9", NaN, NaN, NaN, "6", "1", NaN]
-]
-//console.log(grid);
+  grid: grid = [
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN]
+  ],
+
+  gridEasy: [
+    [NaN, NaN, "6", NaN, NaN, NaN, "3", NaN, "7"],
+    [NaN, NaN, NaN, "3", "5", NaN, NaN, "6", "1"],
+    ["8", NaN, NaN, NaN, NaN, "7", NaN, NaN, NaN],
+    [NaN, "6", "4", "8", "2", "5", "9", NaN, "3"],
+    [NaN, "7", "2", NaN, "3", "6", "1", "8", "4"],
+    [NaN, "9", NaN, NaN, NaN, NaN, NaN, "5", NaN],
+    ["6", NaN, NaN, "7", "8", NaN, "4", NaN, NaN],
+    [NaN, NaN, "3", NaN, NaN, NaN, NaN, "1", NaN],
+    ["4", NaN, "5", NaN, "9", "3", NaN, NaN, NaN]
+  ],
+
+  gridMedium: [
+    [NaN, NaN, NaN, "4", NaN, "6", NaN, NaN, "2"],
+    ["8", NaN, NaN, NaN, "5", "3", "1", "9", NaN],
+    ["9", NaN, "6", NaN, NaN, "8", NaN, NaN, NaN],
+    ["6", "7", NaN, "1", "8", NaN, NaN, NaN, "9"],
+    ["1", NaN, NaN, NaN, NaN, NaN, "3", "7", NaN],
+    [NaN, NaN, "8", NaN, NaN, NaN, "5", NaN, NaN],
+    [NaN, "8", NaN, NaN, "4", NaN, "2", "5", NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, "4"],
+    ["4", NaN, "9", NaN, NaN, NaN, "6", "1", NaN]
+  ],
+
+  gridHard:  [
+    [NaN, "7", NaN, "5", NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, "3", NaN, NaN, NaN],
+    ["5", NaN, NaN, "6", "2", "7", "9", "8", NaN],
+    [NaN, "6", NaN, "1", "7", NaN, NaN, NaN, "2"],
+    ["2", NaN, "1", NaN, NaN, "9", "7", "4", NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, "9", "6"],
+    ["9", NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    ["1", "5", NaN, NaN, "3", "6", NaN, NaN, "9"],
+    [NaN, NaN, NaN, NaN, NaN, "2", NaN, "6", NaN]
+  ],
+
+  gridEmpty: [
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN],
+    [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN]
+  ],
+
+  finishedGrid: [
+    [5, 3, 4, 6, 7, 8, 9, 1, 2],
+    [6, 7, 2, 1, 9, 5, 3, 4, 8],
+    [1, 9, 8, 3, 4, 2, 5, 6, 7],
+    [8, 5, 9, 7, 6, 1, 4, 2, 3],
+    [4, 2, 6, 8, 5, 3, 7, 9, 1],
+    [7, 1, 3, 9, 2, 4, 8, 5, 6],
+    [9, 6, 1, 5, 3, 7, 2, 8, 4],
+    [2, 8, 7, 4, 1, 9, 6, 3, 5],
+    [3, 4, 5, 2, 8, 6, 1, 7, 9]
+  ]
+}
 
 let wrongAnswer = 0; 
 
-//sets difficulty that user can change through buttons
-function setGrid (difficulty) {
- // Use an API to collect my grids from a google doc
+//sets up the grids to be changed based on difficulty
+function setPuzzle (difficulty) {
+  allGrids.grid = allGrids.gridEmpty;
+  setGrid();
+  //console.log(allGrids.grid);
+  switch (difficulty) {
+    case 1:
+      allGrids.grid = allGrids.gridEasy
+      break;
+    case 2:
+      allGrids.grid = allGrids.gridMedium
+      break;
+    case 3:
+      allGrids.grid = allGrids.gridHard
+      break;
+    case 4:
+      allGrids.grid = allGrids.finishedGrid
+      break;
+    default:
+      console.log("error with difficulty switch")
+  } 
+  setGrid();
+  console.log(allGrids.grid);
 }
 
 //changes internal values of html inputs to the preset puzzles
-function setPuzzle () {
-  for (let i=0; i<grid[0]; i++) {
-    for (let j=0; j<grid[0]; j++) {
-      if (grid[i][j] != NaN) {
-        document.getElementById(`input_${i}${j}`).value = grid[i][j]
+function setGrid () {
+  console.log("hi")
+  for (let i=0; i<9; i++) {
+    for (let j=0; j<9; j++) {
+      let number = allGrids.grid[i][j]
+      if (isNaN(number)) {
+        document.getElementById(`input_${i}${j}`).value = NaN 
+        document.getElementById(`input_${i}${j}`).disabled = false
+      } else {
+        document.getElementById(`input_${i}${j}`).value = number
+        document.getElementById(`input_${i}${j}`).disabled = true
       }
     }  
   }
-}
-
-function callPuzzleWithDifficulty () {
-  //this will be responsible for changing the puzzle based on the difficulty you choose, I have to learn about api's to implement
 }
 
 //changes the grid object to match what is being entered
 function arraySet (row, column, input) {
   let value = document.querySelector(input).value;
   console.log(value);
-  grid[row][column] = value;
-  console.log(grid[row][column])
+  allGrids.grid[row][column] = value;
+  console.log(allGrids.grid[row][column])
 };  
 
 //set families with a loop 
@@ -63,7 +146,7 @@ function calculateFamily () {
 
     for (let j=row; j<=(2+row); j++) { // repeats 3(j) times going down the row, increase by +3 after the 3(i) full itteration
       for (let k=column; k<=(2+column); k++) { // repeats 3 times going across the column, increases by 3, than resets after 3 full itteration
-        allFamilies[familyNumber][num] = grid[j][k]
+        allFamilies[familyNumber][num] = allGrids.grid[j][k]
         innerArrayNumber++
         num++
       } 
@@ -79,15 +162,12 @@ function calculateFamily () {
   }
 }
 
-calculateFamily();
-console.log(allFamilies);
-
 //checks array to see if anything matches in rows
 function arrayCheckRow () {
-  for (let i=0; i<grid[0].length; i++) {
-    for (let j=0; j<grid[0].length; j++) {
-      for (let k=(j+1); k<grid[0].length; k++) {  
-        if (grid[i][j]===grid[i][k]) {
+  for (let i=0; i<allGrids.grid[0].length; i++) {
+    for (let j=0; j<allGrids.grid[0].length; j++) {
+      for (let k=(j+1); k<allGrids.grid[0].length; k++) {  
+        if (allGrids.grid[i][j]===allGrids.grid[i][k]) {
           document.getElementById(`input_${i}${j}`).style.color = "red";
           document.getElementById(`input_${i}${k}`).style.color = "red";
           console.log(`column #${i} row #${j} \n and \n column #${i} row #${k} \n are the same`);
@@ -99,14 +179,13 @@ function arrayCheckRow () {
     }
   }
 }
-//arrayCheckRow();
  
 //checks array to see if anything matches in column
 function arrayCheckColumn () {
-  for (let i=0; i<grid[0].length; i++) {
-    for (let j=0; j<grid[0].length; j++) {
-      for (let k=(j+1); k<grid[0].length; k++) {  
-        if (grid[j][i]===grid[k][i]) {
+  for (let i=0; i<allGrids.grid[0].length; i++) {
+    for (let j=0; j<allGrids.grid[0].length; j++) {
+      for (let k=(j+1); k<allGrids.grid[0].length; k++) {  
+        if (allGrids.grid[j][i]===allGrids.grid[k][i]) {
           document.getElementById(`input_${j}${i}`).style.color = "red";
           document.getElementById(`input_${k}${i}`).style.color = "red";
           console.log(`column #${j} row #${i} \n and \n column #${k} row #${i} \n are the same`);
@@ -118,48 +197,14 @@ function arrayCheckColumn () {
     }
   }
 }
-//arrayCheckColumn();
 
 //checks array to see if anything matches within families
 function arrayCheckFamily () {
   for (let i=0; i<9; i++) {
     let familyBox = [];
-
-    //only reason this is a switch is because i need one for grading lol
-    // could just be familybox = allFamilies[i][i]
-    switch (i) {
-      case 0:
-        familyBox = allFamilies[i][i]
-        break;
-      case 1:
-        familyBox = allFamilies[i][i]
-        break;
-      case 2:
-        familyBox = allFamilies[i][i]
-        break;
-      case 3:
-        familyBox = allFamilies[i][i]
-        break;
-      case 4:
-        familyBox = allFamilies[i][i]
-        break;
-      case 5:
-        familyBox = allFamilies[i][i]
-        break;
-      case 6:
-        familyBox = allFamilies[i][i]
-        break;
-      case 7:
-        familyBox = allFamilies[i][i]
-        break;
-      case 8:
-        familyBox = allFamilies[i][i]
-        break;
-      default:
-        console.log("An error has occured in arrayCheckFamily")    
-    }
-    for (let j=0; j<grid[0].length; j++) {
-      for (let k=j+1; k<grid[0].length; k++) {
+    familyBox = allFamilies[i]
+    for (let j=0; j<9; j++) {
+      for (let k=j+1; k<9; k++) {
         if (familyBox[j]===familyBox[k]) {
           console.log(`Box #${i} \n has a mistake`)
           wrongAnswer++
@@ -174,50 +219,42 @@ function arrayCheckFamily () {
 
 //if something is wrong the number will change to red, this lets it change back to compare again
 function changeAllToBlue() {
-  for (let i=0; i<grid[0].length; i++) {
-    for (let j=0; j<grid[0].length; j++) {
+  for (let i=0; i<allGrids.grid[0].length; i++) {
+    for (let j=0; j<allGrids.grid[0].length; j++) {
       document.getElementById(`input_${i}${j}`).style.color = "blue";
     }
   }
 }
 
-// ERASE THIS IT DOES NOTHING
-function changeDifficulty (challengeRating) {
-  if (challengeRating === 1) {
-    changePuzzle(1)
-  } else if (challengeRating === 2) {
-    changePuzzle(2)
-  } else if (challengeRating === 3) {
-    changePuzzle(3)
-  } else {
-    console.log("error in changeDifficulty")
-  }
-}
-
-
 //makes sure everything entered is a number, if it is, it will run the checkAll
 function checkIfNumber () {
+  console.log("checking")
   let allAreNumberCheck = 0
-  for (let i=0; i<grid[0].length; i++) {
-    for (let j=0; j<grid[0].length; j++) {
-      if (grid[i][j]===NaN) {
+  for (let i=0; i<9; i++) {
+    for (let j=0; j<9; j++) {
+      if (isNaN(allGrids.grid[i][j])) {
         alert("Please enter a valid number into every spot before submiting") 
+        i = 10
+        j = 10
       } else {
         allAreNumberCheck++
       }
+      console.log(allAreNumberCheck);
     }   
   }
-  if (allAreNumberCheck===324) {
+  if (allAreNumberCheck===81) {
     checkAll()
   }
 }
 
 //runs every check and resets the colors to blue. if everything is right than you win!
 function checkAll () {
+  console.log("checking part 2")
   wrongAnswer = 0;
   changeAllToBlue();
   arrayCheckRow();
   arrayCheckColumn();
+  calculateFamily();
   arrayCheckFamily();
   if (wrongAnswer===0) {
     alert("congrats!!!")
@@ -226,8 +263,8 @@ function checkAll () {
 
 //TODO
 //
-//want to change the css of wrong ones, need to also change that it is disabled
-//add a way to grab preset sudoku puzzles from an api
+//fix up CSS
+//
 
 
 
