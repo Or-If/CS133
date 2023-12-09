@@ -2,13 +2,50 @@
 
 body {
   background-color: darkslateblue;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
-  max-width: 100vw;
+  display: grid;
+  grid-template-columns: '20% 60% 20%';
+  grid-template-areas: 
+  'head head head'
+  'options options options'
+  '. main .'
+  'foot foot foot';
 }
+
+header {
+  text-align: center;
+  grid-area: head;
+  
+}
+
+.difficulty {
+  grid-area: options;
+  text-align: center;
+}
+
+button {
+  height: 30px;
+  margin: 5px;
+  background-color: lightskyblue;
+  border-radius: 5px;
+  border: 4px slateblue groove;
+}
+
+#gameSpace {
+  grid-area: main;
+  text-align: center;
+  display: grid;
+  background-color: slateblue;
+  width: 600px;
+  justify-self: center;
+}
+
+.gameRow {
+  display: flex;
+  justify-content: space-around;
+  background-color: lightskyblue;
+  text-align: center;
+}
+
 
 input {
   width: 40px;
@@ -22,45 +59,18 @@ input {
   
 }
 
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  min-height: 120px;
-  
+span {
+  border-right: 5px darkblue groove;
 }
 
-button {
-  height: 30px;
-  margin: 5px;
+footer {
+  grid-area: foot;
+  text-align: center;
+  margin: 10px auto;
+  height: 25px;
+  font-size: large;
 }
-
-#gameSpace {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  flex: 2;
-
-  background-color: slateblue;
-  width: 270px;
-  max-width: 100vw;
-  height: 270px;
-  max-height: 100vh;
-}
-
-.gameRow {
-  display: flex;
-  justify-content: space-around;
-
-  background-color: lightskyblue;
-  max-width: 40vw;
-  height: 270px;
-  
-}
-
-/* this seems to be the only way online I could find to hide arrows on number inputs 
+/* this seems to be the only way online I could find to hide arrows on number inputs */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -69,4 +79,3 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
-*/
